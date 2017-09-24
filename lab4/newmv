@@ -1,0 +1,46 @@
+#!/bin/bash
+
+function isDir () {
+  
+  version=1
+  fname=$3
+
+  while [ -f $2$fname ];
+    do
+
+      fname=$3.$version
+      version=$((version+1))
+
+    done
+  
+  mv -f $1 $2$fname || echo Move failed. Try again.;
+}
+
+function isFile () {
+  
+  version=1
+  fname=$2
+  
+  while [ -f $fname ];
+    do
+
+      fname=$2.$version
+      version=$((version+1))
+
+  done
+
+  mv -f $1 $fname || echo Move failed. Try again.;
+}
+
+if [ -f "$1" ] && [ -d `dirname $2` ];
+  then
+      if [ -d "$2" ];
+        then
+          isDir $1 $2 `basename $1`
+        else
+          isFile $1 $2 `basename $2`
+      fi
+  else
+    echo $'\nYou input $1 and $2, which are not valid arguments'
+    echo "Please specify a valid source file and a destination"
+fi
