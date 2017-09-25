@@ -41,6 +41,6 @@ if [ -f "$1" ] && [ -d `dirname $2` ];
           isFile $1 $2 `basename $2`
       fi
   else
-    echo $'\nYou input $1 and $2, which are not valid arguments'
+    echo $'\nYou input '$1' and '$2' , which are not valid arguments'
     echo "Please specify a valid source file and a destination"
 fi
