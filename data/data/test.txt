@@ -1,0 +1,23 @@
+uid=1001(mshaneck) gid=1001(mshaneck)
+groups=1001(mshaneck),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),1101(csis461),1121(admin),1122(csis345f15),1131(csis215),1132(csis342)lksadlaksjdaklsdjaskldjaskljd
+
+test line
+test line
+test line
+test line
+test line
+test line
+test line
+test line
+test line
+test line
+test line
+test line
+test line
+test line
+test line
+test line
+test line
+test line
+test line
+test line

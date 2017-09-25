@@ -1,0 +1,388 @@
+No.     Time        Source                Destination           Protocol Info
+      1 0.000000    10.72.60.18           239.255.255.250       SSDP     NOTIFY * HTTP/1.1
+      2 0.007963    10.72.60.18           239.255.255.250       SSDP     NOTIFY * HTTP/1.1
+      3 0.139783    10.72.60.18           239.255.255.250       SSDP     NOTIFY * HTTP/1.1
+      4 0.155852    10.22.70.102          10.22.70.1            UDP      Source port: 1091  Destination port: 8905
+      5 0.208981    10.72.60.18           239.255.255.250       SSDP     NOTIFY * HTTP/1.1
+      6 0.320823    10.72.60.18           239.255.255.250       SSDP     NOTIFY * HTTP/1.1
+      7 0.362083    10.212.70.2           224.0.0.2             HSRP     Hello (state Active)
+      8 0.541711    10.22.70.102          10.254.20.43          UDP      Source port: 3501  Destination port: 19283
+      9 0.556421    10.254.20.43          10.22.70.102          UDP      Source port: 19283  Destination port: 3501
+     10 0.556446    10.22.70.102          10.254.20.43          UDP      Source port: 3501  Destination port: 19283
+     11 0.818702    Cisco_cc:93:a1        PVST+                 STP      RST. Root = 26846/00:14:f1:83:94:00  Cost = 3002  Port = 0x808d
+     12 0.894587    10.22.70.2            224.0.0.1             IGMP     V2 Membership Query
+     13 1.453689    10.22.70.2            224.0.0.2             HSRP     Hello (state Standby)
+     14 1.698634    Cisco_cc:93:a1        Cisco_cc:93:a1        LOOP     Reply
+     15 1.794471    10.212.70.3           224.0.0.13            PIMv2    Hello
+     16 1.813100    10.22.70.35           239.255.255.250       SSDP     M-SEARCH * HTTP/1.1
+     17 1.950869    Cisco_cc:93:a1        PVST+                 STP      RST. Root = 24846/00:14:f1:59:f8:00  Cost = 3002  Port = 0x808d
+     18 1.978110    10.22.70.3            224.0.0.2             HSRP     Hello (state Active)
+     19 2.350892    10.212.70.3           224.0.0.2             HSRP     Hello (state Standby)
+     20 2.832790    Cisco_cc:93:a1        PVST+                 STP      RST. Root = 26846/00:14:f1:83:94:00  Cost = 3002  Port = 0x808d
+     21 3.249459    10.212.70.2           224.0.0.2             HSRP     Hello (state Active)
+     22 3.718045    10.22.70.90           10.22.70.255          BROWSER  Host Announcement DH2226C10, Workstation, Server, SQL Server, NT Workstation, Potential Browser
+     23 3.964319    Cisco_cc:93:a1        PVST+                 STP      RST. Root = 24846/00:14:f1:59:f8:00  Cost = 3002  Port = 0x808d
+     24 4.410276    10.22.70.2            224.0.0.2             HSRP     Hello (state Standby)
+     25 4.550957    10.22.70.3            224.0.0.13            PIMv2    Hello
+     26 4.808160    10.22.70.35           239.255.255.250       SSDP     M-SEARCH * HTTP/1.1
+     27 4.845566    Cisco_cc:93:a1        PVST+                 STP      RST. Root = 26846/00:14:f1:83:94:00  Cost = 3002  Port = 0x808d
+     28 4.914785    10.22.70.3            224.0.0.2             HSRP     Hello (state Active)
+     29 5.342989    10.212.70.3           224.0.0.2             HSRP     Hello (state Standby)
+     30 5.682233    10.22.70.102          239.255.255.250       IGMP     V2 Membership Report
+     31 5.689423    10.22.70.102          10.22.70.1            UDP      Source port: 1092  Destination port: 8905
+     32 5.901976    216.239.51.91         10.22.70.102          TCP      http > 1090 [FIN, ACK] Seq=0 Ack=0 Win=6624 Len=0
+     33 5.902020    10.22.70.102          216.239.51.91         TCP      1090 > http [ACK] Seq=0 Ack=1 Win=65535 Len=0
+     34 5.931401    10.17.23.63           239.255.255.250       SSDP     M-SEARCH * HTTP/1.1
+     35 5.977999    Cisco_cc:93:a1        PVST+                 STP      RST. Root = 24846/00:14:f1:59:f8:00  Cost = 3002  Port = 0x808d
+     36 6.133772    10.212.70.2           224.0.0.2             HSRP     Hello (state Active)
+     37 6.200319    Cisco_33:41:ca        CDP/VTP/DTP/PAgP/UDLD CDP      Cisco Discovery Protocol
+     38 6.662256    10.22.70.2            224.0.0.13            PIMv2    Hello
+     39 6.857942    Cisco_cc:93:a1        PVST+                 STP      RST. Root = 26846/00:14:f1:83:94:00  Cost = 3002  Port = 0x808d
+     40 7.258636    10.212.70.47          10.208.1.37           SKINNY   KeepAliveMessage 
+     41 7.258649    10.208.1.37           10.212.70.47          TCP      2000 > 49890 [ACK] Seq=0 Ack=12 Win=16344 Len=0
+     42 7.258659    10.208.1.37           10.212.70.47          SKINNY   KeepAliveAckMessage 
+     43 7.269267    10.212.70.47          10.208.1.37           TCP      49890 > 2000 [ACK] Seq=12 Ack=12 Win=1400 Len=0
+     44 7.334505    10.22.70.2            224.0.0.2             HSRP     Hello (state Standby)
+     45 7.382421    10.212.70.2           224.0.0.13            PIMv2    Hello
+     46 7.791125    10.22.70.3            224.0.0.2             HSRP     Hello (state Active)
+     47 7.824388    10.22.70.35           239.255.255.250       SSDP     M-SEARCH * HTTP/1.1
+     48 7.990795    Cisco_cc:93:a1        PVST+                 STP      RST. Root = 24846/00:14:f1:59:f8:00  Cost = 3002  Port = 0x808d
+     49 8.161002    10.22.70.102          10.254.10.82          DNS      Standard query A img0.gmodules.com
+     50 8.162499    10.254.10.82          10.22.70.102          DNS      Standard query response CNAME www.google.com CNAME www.l.google.com A 64.233.169.99 A 64.233.169.104 A 64.233.169.147 A 64.233.169.103
+     51 8.163120    10.22.70.102          64.233.169.99         TCP      1093 > http [SYN] Seq=0 Len=0 MSS=1460
+     52 8.189139    64.233.169.99         10.22.70.102          TCP      http > 1093 [SYN, ACK] Seq=0 Ack=1 Win=1380 Len=0 MSS=1380
+     53 8.189168    10.22.70.102          64.233.169.99         TCP      1093 > http [ACK] Seq=1 Ack=1 Win=65535 Len=0
+     54 8.189278    10.22.70.102          64.233.169.99         HTTP     GET /ig/images/skins/springscape/10am/arrow_blue_highlight.gif HTTP/1.1
+     55 8.215762    64.233.169.99         10.22.70.102          TCP      http > 1093 [ACK] Seq=1 Ack=537 Win=6768 Len=0
+     56 8.254369    10.212.70.3           224.0.0.2             HSRP     Hello (state Standby)
+     57 8.288995    64.233.169.99         10.22.70.102          HTTP     HTTP/1.1 304 Not Modified
+     58 8.447876    10.22.70.102          64.233.169.99         TCP      1093 > http [ACK] Seq=537 Ack=176 Win=65360 Len=0
+     59 8.846483    10.22.70.102          10.254.10.82          DNS      Standard query A www.google.com
+     60 8.848073    10.254.10.82          10.22.70.102          DNS      Standard query response CNAME www.l.google.com A 64.233.169.103 A 64.233.169.99 A 64.233.169.104 A 64.233.169.147
+     61 8.848618    10.22.70.102          64.233.169.103        TCP      1094 > http [SYN] Seq=0 Len=0 MSS=1460
+     62 8.872074    Cisco_cc:93:a1        PVST+                 STP      RST. Root = 26846/00:14:f1:83:94:00  Cost = 3002  Port = 0x808d
+     63 8.876041    64.233.169.103        10.22.70.102          TCP      http > 1094 [SYN, ACK] Seq=0 Ack=1 Win=1380 Len=0 MSS=1380
+     64 8.876087    10.22.70.102          64.233.169.103        TCP      1094 > http [ACK] Seq=1 Ack=1 Win=65535 Len=0
+     65 8.876233    10.22.70.102          64.233.169.103        HTTP     GET /ig/setp?et=yuIAbN1k&source=&pid=&ap=&prefid=&url=http%3A%2F%2Fwww.google.com%2Fig&ct=0 HTTP/1.1
+     66 8.902670    64.233.169.103        10.22.70.102          TCP      http > 1094 [ACK] Seq=1 Ack=1171 Win=7188 Len=0
+     67 9.011854    64.233.169.103        10.22.70.102          HTTP     HTTP/1.1 302 Moved Temporarily
+     68 9.011912    10.22.70.102          64.233.169.103        TCP      1094 > http [ACK] Seq=1171 Ack=218 Win=65319 Len=0
+     69 9.012263    10.22.70.102          64.233.169.103        TCP      1094 > http [FIN, ACK] Seq=1171 Ack=218 Win=65319 Len=0
+     70 9.013141    64.233.169.103        10.22.70.102          TCP      http > 1094 [ACK] Seq=218 Ack=1172 Win=4096 Len=0
+     71 9.026974    10.22.70.102          64.233.169.103        TCP      1095 > http [SYN] Seq=0 Len=0 MSS=1460
+     72 9.053101    64.233.169.103        10.22.70.102          TCP      http > 1095 [SYN, ACK] Seq=0 Ack=1 Win=1380 Len=0 MSS=1380
+     73 9.053133    10.22.70.102          64.233.169.103        TCP      1095 > http [ACK] Seq=1 Ack=1 Win=65535 Len=0
+     74 9.053218    10.22.70.102          64.233.169.103        HTTP     GET /ig/setp?et=yuIAbN1k&source=&pid=&ap=&prefid=&url=http%3A%2F%2Fwww.google.com%2Fig&ct=0&safe=active HTTP/1.1
+     75 9.079721    64.233.169.103        10.22.70.102          TCP      http > 1095 [ACK] Seq=1 Ack=1183 Win=7260 Len=0
+     76 9.134308    10.212.70.2           224.0.0.2             HSRP     Hello (state Active)
+     77 9.174236    64.233.169.103        10.22.70.102          HTTP     HTTP/1.1 302 Found (text/html)
+     78 9.183433    10.22.70.102          64.233.169.103        HTTP     GET /ig HTTP/1.1
+     79 9.210182    64.233.169.103        10.22.70.102          TCP      http > 1095 [ACK] Seq=484 Ack=2269 Win=9680 Len=0
+     80 9.633520    64.233.169.103        10.22.70.102          TCP      [TCP segment of a reassembled PDU]
+     81 9.633557    64.233.169.103        10.22.70.102          TCP      [TCP Previous segment lost] [TCP segment of a reassembled PDU]
+     82 9.633586    10.22.70.102          64.233.169.103        TCP      1095 > http [ACK] Seq=2269 Ack=1864 Win=65535 Len=0
+     83 9.633621    64.233.169.103        10.22.70.102          TCP      [TCP Out-Of-Order] [TCP segment of a reassembled PDU]
+     84 9.633659    10.22.70.102          64.233.169.103        TCP      1095 > http [ACK] Seq=2269 Ack=4624 Win=65535 Len=0
+     85 9.660140    64.233.169.103        10.22.70.102          TCP      [TCP segment of a reassembled PDU]
+     86 9.660181    64.233.169.103        10.22.70.102          TCP      [TCP Previous segment lost] [TCP segment of a reassembled PDU]
+     87 9.660209    10.22.70.102          64.233.169.103        TCP      1095 > http [ACK] Seq=2269 Ack=6004 Win=65535 Len=0
+     88 9.660248    64.233.169.103        10.22.70.102          TCP      [TCP Previous segment lost] [TCP segment of a reassembled PDU]
+     89 9.660266    10.22.70.102          64.233.169.103        TCP      [TCP Dup ACK 87#1] 1095 > http [ACK] Seq=2269 Ack=6004 Win=65535 Len=0
+     90 9.660289    64.233.169.103        10.22.70.102          TCP      [TCP Fast Retransmission] [TCP segment of a reassembled PDU]
+     91 9.660309    64.233.169.103        10.22.70.102          TCP      [TCP Out-Of-Order] [TCP segment of a reassembled PDU]
+     92 9.660346    10.22.70.102          64.233.169.103        TCP      1095 > http [ACK] Seq=2269 Ack=10334 Win=65535 Len=0
+     93 9.686759    64.233.169.103        10.22.70.102          HTTP     [TCP Previous segment lost] Continuation or non-HTTP traffic
+     94 9.686806    10.22.70.102          64.233.169.103        TCP      [TCP Dup ACK 92#1] 1095 > http [ACK] Seq=2269 Ack=10334 Win=65535 Len=0
+     95 9.686844    64.233.169.103        10.22.70.102          TCP      [TCP Fast Retransmission] [TCP segment of a reassembled PDU]
+     96 9.686877    10.22.70.102          64.233.169.103        TCP      1095 > http [ACK] Seq=2269 Ack=13094 Win=65535 Len=0
+     97 9.688062    64.233.169.103        10.22.70.102          HTTP     [TCP Previous segment lost] Continuation or non-HTTP traffic
+     98 9.688083    10.22.70.102          64.233.169.103        TCP      [TCP Dup ACK 96#1] 1095 > http [ACK] Seq=2269 Ack=13094 Win=65535 Len=0
+     99 9.688108    64.233.169.103        10.22.70.102          HTTP     [TCP Previous segment lost] Continuation or non-HTTP traffic
+    100 9.688126    10.22.70.102          64.233.169.103        TCP      [TCP Dup ACK 96#2] 1095 > http [ACK] Seq=2269 Ack=13094 Win=65535 Len=0
+    101 9.688148    64.233.169.103        10.22.70.102          HTTP     [TCP Fast Retransmission] Continuation or non-HTTP traffic
+    102 9.688165    64.233.169.103        10.22.70.102          HTTP     [TCP Out-Of-Order] Continuation or non-HTTP traffic
+    103 9.688208    10.22.70.102          64.233.169.103        TCP      1095 > http [ACK] Seq=2269 Ack=18614 Win=65535 Len=0
+    104 9.712888    64.233.169.103        10.22.70.102          HTTP     Continuation or non-HTTP traffic
+    105 9.712918    64.233.169.103        10.22.70.102          HTTP     [TCP Previous segment lost] Continuation or non-HTTP traffic
+    106 9.712942    10.22.70.102          64.233.169.103        TCP      1095 > http [ACK] Seq=2269 Ack=19994 Win=65535 Len=0
+    107 9.714374    64.233.169.103        10.22.70.102          HTTP     [TCP Out-Of-Order] Continuation or non-HTTP traffic
+    108 9.714417    10.22.70.102          64.233.169.103        TCP      1095 > http [ACK] Seq=2269 Ack=22054 Win=65535 Len=0
+    109 10.011251   Cisco_cc:93:a1        PVST+                 STP      RST. Root = 24846/00:14:f1:59:f8:00  Cost = 3002  Port = 0x808d
+    110 10.162197   10.22.70.102          64.233.169.103        HTTP     GET /ig/gmailjson?hl=en&url=http://www.google.com/ig&cnt=0&val=5&sv=1 HTTP/1.1
+    111 10.189634   64.233.169.103        10.22.70.102          TCP      http > 1095 [ACK] Seq=22054 Ack=3417 Win=12100 Len=0
+    112 10.333401   10.22.70.2            224.0.0.2             HSRP     Hello (state Standby)
+    113 10.382467   10.22.70.102          64.233.169.103        TCP      1096 > http [SYN] Seq=0 Len=0 MSS=1460
+    114 10.407960   64.233.169.103        10.22.70.102          TCP      http > 1096 [SYN, ACK] Seq=0 Ack=1 Win=1380 Len=0 MSS=1380
+    115 10.408006   10.22.70.102          64.233.169.103        TCP      1096 > http [ACK] Seq=1 Ack=1 Win=65535 Len=0
+    116 10.408210   10.22.70.102          64.233.169.103        HTTP     GET /calendar/hello HTTP/1.1
+    117 10.435914   64.233.169.103        10.22.70.102          TCP      http > 1096 [ACK] Seq=1 Ack=986 Win=7091 Len=0
+    118 10.531756   64.233.169.103        10.22.70.102          HTTP     HTTP/1.1 200 OK (text/html)
+    119 10.632621   10.22.70.102          64.233.169.103        HTTP     GET /calendar/feeds/shaneck@gmail.com/ HTTP/1.1
+    120 10.659544   64.233.169.103        10.22.70.102          TCP      http > 1096 [ACK] Seq=560 Ack=2323 Win=9555 Len=0
+    121 10.678172   64.233.169.103        10.22.70.102          HTTP     HTTP/1.1 302 Moved Temporarily
+    122 10.678198   10.22.70.102          64.233.169.103        TCP      1095 > http [ACK] Seq=3417 Ack=22249 Win=65341 Len=0
+    123 10.678321   10.22.70.102          64.233.169.103        TCP      1095 > http [FIN, ACK] Seq=3417 Ack=22249 Win=65341 Len=0
+    124 10.678799   10.22.70.102          64.233.169.103        TCP      1097 > http [SYN] Seq=0 Len=0 MSS=1460
+    125 10.679507   64.233.169.103        10.22.70.102          TCP      http > 1095 [ACK] Seq=22249 Ack=3418 Win=4096 Len=0
+    126 10.704806   64.233.169.103        10.22.70.102          TCP      http > 1097 [SYN, ACK] Seq=0 Ack=1 Win=1380 Len=0 MSS=1380
+    127 10.704827   10.22.70.102          64.233.169.103        TCP      1097 > http [ACK] Seq=1 Ack=1 Win=65535 Len=0
+    128 10.704908   10.22.70.102          64.233.169.103        HTTP     GET /ig/gmailjson?hl=en&url=http://www.google.com/ig&cnt=0&val=5&sv=1&safe=active HTTP/1.1
+    129 10.731423   64.233.169.103        10.22.70.102          TCP      http > 1097 [ACK] Seq=1 Ack=1161 Win=7128 Len=0
+    130 10.791140   10.22.70.3            224.0.0.2             HSRP     Hello (state Active)
+    131 10.799899   64.233.169.103        10.22.70.102          TCP      [TCP segment of a reassembled PDU]
+    132 10.803937   64.233.169.103        10.22.70.102          HTTP     HTTP/1.1 200 OK
+    133 10.803961   10.22.70.102          64.233.169.103        TCP      1096 > http [ACK] Seq=2323 Ack=1404 Win=65535 Len=0
+    134 10.814041   10.22.70.102          64.233.169.103        TCP      [TCP segment of a reassembled PDU]
+    135 10.814074   10.22.70.102          64.233.169.103        HTTP     GET /calendar/feeds/shaneck%40gmail.com/private/full?singleevents=true&start-min=2007-07-22&start-max=2007-09-08&max-results=4000 HTTP/1.1
+    136 10.842545   64.233.169.103        10.22.70.102          TCP      http > 1096 [ACK] Seq=1404 Ack=3703 Win=12420 Len=0
+    137 10.842559   64.233.169.103        10.22.70.102          TCP      http > 1096 [ACK] Seq=1404 Ack=3751 Win=12420 Len=0
+    138 10.891795   Cisco_cc:93:a1        PVST+                 STP      RST. Root = 26846/00:14:f1:83:94:00  Cost = 3002  Port = 0x808d
+    139 11.131446   10.212.70.3           224.0.0.2             HSRP     Hello (state Standby)
+    140 11.236211   10.22.70.102          10.22.70.1            UDP      Source port: 1098  Destination port: 8905
+    141 11.327129   64.233.169.103        10.22.70.102          TCP      [TCP segment of a reassembled PDU]
+    142 11.344417   64.233.169.103        10.22.70.102          TCP      [TCP segment of a reassembled PDU]
+    143 11.344440   64.233.169.103        10.22.70.102          TCP      [TCP segment of a reassembled PDU]
+    144 11.344475   10.22.70.102          64.233.169.103        TCP      1096 > http [ACK] Seq=3751 Ack=3738 Win=65535 Len=0
+    145 11.377706   64.233.169.103        10.22.70.102          TCP      [TCP segment of a reassembled PDU]
+    146 11.377735   64.233.169.103        10.22.70.102          HTTP     HTTP/1.1 200 OK
+    147 11.377769   10.22.70.102          64.233.169.103        TCP      1096 > http [ACK] Seq=3751 Ack=6069 Win=65535 Len=0
+    148 11.524149   64.233.169.103        10.22.70.102          TCP      [TCP Previous segment lost] [TCP segment of a reassembled PDU]
+    149 11.524188   10.22.70.102          64.233.169.103        TCP      [TCP Dup ACK 128#1] 1097 > http [ACK] Seq=1161 Ack=1 Win=65535 Len=0
+    150 11.525448   64.233.169.103        10.22.70.102          TCP      [TCP Fast Retransmission] [TCP segment of a reassembled PDU]
+    151 11.525490   10.22.70.102          64.233.169.103        TCP      1097 > http [ACK] Seq=1161 Ack=1460 Win=65535 Len=0
+    152 11.703846   Cisco_cc:93:a1        Cisco_cc:93:a1        LOOP     Reply
+    153 11.729146   10.22.70.102          10.254.30.112         TCP      [TCP segment of a reassembled PDU]
+    154 11.730448   10.254.30.112         10.22.70.102          TCP      4704 > 3568 [ACK] Seq=0 Ack=1 Win=65045 Len=0
+    155 11.952567   10.22.70.102          128.101.35.26         SSH      Encrypted request packet len=52
+    156 11.994053   10.212.70.2           224.0.0.2             HSRP     Hello (state Active)
+    157 12.003369   128.101.35.26         10.22.70.102          SSH      Encrypted response packet len=52
+    158 12.003412   128.101.35.26         10.22.70.102          SSH      Encrypted response packet len=100
+    159 12.003437   10.22.70.102          128.101.35.26         TCP      4946 > 22 [ACK] Seq=52 Ack=152 Win=65383 Len=0
+    160 12.003767   10.22.70.102          128.101.35.26         SSH      Encrypted request packet len=52
+    161 12.026022   Cisco_cc:93:a1        PVST+                 STP      RST. Root = 24846/00:14:f1:59:f8:00  Cost = 3002  Port = 0x808d
+    162 12.080567   10.22.70.102          128.101.35.26         SSH      Encrypted request packet len=52
+    163 12.093882   128.101.35.26         10.22.70.102          TCP      22 > 4946 [ACK] Seq=152 Ack=104 Win=8576 Len=0
+    164 12.131156   128.101.35.26         10.22.70.102          TCP      22 > 4946 [ACK] Seq=152 Ack=156 Win=8576 Len=0
+    165 12.131170   128.101.35.26         10.22.70.102          SSH      Encrypted response packet len=52
+    166 12.131183   128.101.35.26         10.22.70.102          SSH      Encrypted response packet len=100
+    167 12.131199   10.22.70.102          128.101.35.26         TCP      4946 > 22 [ACK] Seq=156 Ack=304 Win=65231 Len=0
+    168 12.135794   10.22.70.102          216.239.51.91         TCP      1090 > http [FIN, ACK] Seq=0 Ack=1 Win=65535 Len=0
+    169 12.161779   216.239.51.91         10.22.70.102          TCP      http > 1090 [ACK] Seq=1 Ack=1 Win=6624 Len=0
+    170 12.800624   10.22.70.102          128.101.35.26         SSH      Encrypted request packet len=52
+    171 12.851350   128.101.35.26         10.22.70.102          SSH      Encrypted response packet len=52
+    172 12.856495   10.22.70.102          128.101.35.26         SSH      Encrypted request packet len=52
+    173 12.904535   10.22.70.102          128.101.35.26         SSH      Encrypted request packet len=52
+    174 12.907259   128.101.35.26         10.22.70.102          SSH      Encrypted response packet len=52
+    175 12.907290   Cisco_cc:93:a1        PVST+                 STP      RST. Root = 26846/00:14:f1:83:94:00  Cost = 3002  Port = 0x808d
+    176 12.955185   128.101.35.26         10.22.70.102          SSH      Encrypted response packet len=52
+    177 12.955221   10.22.70.102          128.101.35.26         TCP      4946 > 22 [ACK] Seq=312 Ack=460 Win=65075 Len=0
+    178 13.000606   10.22.70.102          128.101.35.26         SSH      Encrypted request packet len=52
+    179 13.032475   10.22.70.102          128.101.35.26         SSH      Encrypted request packet len=52
+    180 13.048480   10.22.70.102          128.101.35.26         SSH      Encrypted request packet len=52
+    181 13.051028   128.101.35.26         10.22.70.102          SSH      Encrypted response packet len=52
+    182 13.082983   128.101.35.26         10.22.70.102          SSH      Encrypted response packet len=52
+    183 13.083023   10.22.70.102          128.101.35.26         TCP      4946 > 22 [ACK] Seq=468 Ack=564 Win=64971 Len=0
+    184 13.098950   128.101.35.26         10.22.70.102          SSH      Encrypted response packet len=52
+    185 13.260449   10.22.70.102          128.101.35.26         TCP      4946 > 22 [ACK] Seq=468 Ack=616 Win=64919 Len=0
+    186 13.282659   10.22.70.2            224.0.0.2             HSRP     Hello (state Standby)
+    187 13.416638   10.22.70.102          128.101.35.26         SSH      Encrypted request packet len=52
+    188 13.467701   128.101.35.26         10.22.70.102          SSH      Encrypted response packet len=52
+    189 13.515632   128.101.35.26         10.22.70.102          SSH      Encrypted response packet len=52
+    190 13.515663   128.101.35.26         10.22.70.102          SSH      Encrypted response packet len=116
+    191 13.515689   10.22.70.102          128.101.35.26         TCP      4946 > 22 [ACK] Seq=520 Ack=836 Win=64699 Len=0
+    192 13.567543   128.101.35.26         10.22.70.102          SSH      Encrypted response packet len=1380
+    193 13.567567   128.101.35.26         10.22.70.102          SSH      Encrypted response packet len=1380
+    194 13.567582   128.101.35.26         10.22.70.102          SSH      Encrypted response packet len=1380
+    195 13.567614   10.22.70.102          128.101.35.26         TCP      4946 > 22 [ACK] Seq=520 Ack=4976 Win=65535 Len=0
+    196 13.618130   128.101.35.26         10.22.70.102          SSH      Encrypted response packet len=128
+    197 13.655403   10.22.70.3            224.0.0.2             HSRP     Hello (state Active)
+    198 13.807321   10.22.70.102          128.101.35.26         TCP      4946 > 22 [ACK] Seq=520 Ack=5104 Win=65407 Len=0
+    199 14.021487   10.22.70.2            224.0.0.2             HSRP     Advertise (state Passive)
+    200 14.040115   Cisco_cc:93:a1        PVST+                 STP      RST. Root = 24846/00:14:f1:59:f8:00  Cost = 3002  Port = 0x808d
+    201 14.126667   10.212.70.3           224.0.0.2             HSRP     Hello (state Standby)
+    202 14.897438   10.212.70.2           224.0.0.2             HSRP     Hello (state Active)
+    203 14.928037   Cisco_cc:93:a1        PVST+                 STP      RST. Root = 26846/00:14:f1:83:94:00  Cost = 3002  Port = 0x808d
+    204 16.052927   Cisco_cc:93:a1        PVST+                 STP      RST. Root = 24846/00:14:f1:59:f8:00  Cost = 3002  Port = 0x808d
+    205 16.229976   10.22.70.2            224.0.0.2             HSRP     Hello (state Standby)
+    206 16.570770   10.22.70.3            224.0.0.2             HSRP     Hello (state Active)
+    207 16.767473   10.22.70.102          10.22.70.1            UDP      Source port: 1099  Destination port: 8905
+    208 16.951369   Cisco_cc:93:a1        PVST+                 STP      RST. Root = 26846/00:14:f1:83:94:00  Cost = 3002  Port = 0x808d
+    209 17.022985   10.212.70.3           224.0.0.2             HSRP     Hello (state Standby)
+    210 17.861565   10.212.70.2           224.0.0.2             HSRP     Hello (state Active)
+    211 18.066572   Cisco_cc:93:a1        PVST+                 STP      RST. Root = 24846/00:14:f1:59:f8:00  Cost = 3002  Port = 0x808d
+    212 18.987774   Cisco_cc:93:a1        PVST+                 STP      RST. Root = 26846/00:14:f1:83:94:00  Cost = 3002  Port = 0x808d
+    213 19.142187   10.22.70.2            224.0.0.2             HSRP     Hello (state Standby)
+    214 19.550875   10.22.70.3            224.0.0.2             HSRP     Hello (state Active)
+    215 19.959459   10.212.70.3           224.0.0.2             HSRP     Hello (state Standby)
+    216 20.078828   Cisco_cc:93:a1        PVST+                 STP      RST. Root = 24846/00:14:f1:59:f8:00  Cost = 3002  Port = 0x808d
+    217 20.698082   10.22.70.102          10.254.20.36          SMB      Echo Request
+    218 20.699086   10.254.20.36          10.22.70.102          SMB      Echo Response
+    219 20.753680   10.212.70.2           224.0.0.2             HSRP     Hello (state Active)
+    220 20.916779   10.22.70.102          10.254.20.36          TCP      3615 > netbios-ssn [ACK] Seq=53 Ack=53 Win=64905 Len=0
+    221 21.011925   Cisco_cc:93:a1        PVST+                 STP      RST. Root = 26846/00:14:f1:83:94:00  Cost = 3002  Port = 0x808d
+    222 21.712153   Cisco_cc:93:a1        Cisco_cc:93:a1        LOOP     Reply
+    223 22.026325   10.22.70.2            224.0.0.2             HSRP     Hello (state Standby)
+    224 22.094193   Cisco_cc:93:a1        PVST+                 STP      RST. Root = 24846/00:14:f1:59:f8:00  Cost = 3002  Port = 0x808d
+    225 22.303315   10.22.70.102          10.22.70.1            UDP      Source port: 1100  Destination port: 8905
+    226 22.454970   10.22.70.3            224.0.0.2             HSRP     Hello (state Active)
+    227 22.843683   10.212.70.3           224.0.0.2             HSRP     Hello (state Standby)
+    228 22.843697   10.212.70.3           224.0.0.2             HSRP     Advertise (state Passive)
+    229 23.042031   Cisco_cc:93:a1        PVST+                 STP      RST. Root = 26846/00:14:f1:83:94:00  Cost = 3002  Port = 0x808d
+    230 23.642406   10.212.70.2           224.0.0.2             HSRP     Hello (state Active)
+    231 23.890012   10.22.70.79           10.22.70.255          BROWSER  Host Announcement DH2208WF5, Workstation, Server, SQL Server, NT Workstation, Potential Browser
+    232 24.106995   Cisco_cc:93:a1        PVST+                 STP      RST. Root = 24846/00:14:f1:59:f8:00  Cost = 3002  Port = 0x808d
+    233 24.626072   10.22.70.102          64.233.169.103        HTTP     GET /calendar/ HTTP/1.1
+    234 24.652798   64.233.169.103        10.22.70.102          TCP      http > 1096 [ACK] Seq=6069 Ack=4731 Win=7056 Len=0
+    235 24.724690   64.233.169.103        10.22.70.102          HTTP     HTTP/1.1 301 Moved Permanently (text/html)
+    236 24.729807   10.22.70.102          64.233.169.103        HTTP     GET /calendar/render HTTP/1.1
+    237 24.756617   64.233.169.103        10.22.70.102          TCP      http > 1097 [ACK] Seq=1460 Ack=2147 Win=7098 Len=0
+    238 24.854337   10.22.70.102          64.233.169.103        TCP      1096 > http [ACK] Seq=4731 Ack=6494 Win=65110 Len=0
+    239 24.998903   10.22.70.2            224.0.0.2             HSRP     Hello (state Standby)
+    240 25.005546   64.233.169.103        10.22.70.102          TCP      [TCP segment of a reassembled PDU]
+    241 25.005577   64.233.169.103        10.22.70.102          TCP      [TCP segment of a reassembled PDU]
+    242 25.005592   64.233.169.103        10.22.70.102          TCP      [TCP segment of a reassembled PDU]
+    243 25.005631   10.22.70.102          64.233.169.103        TCP      1097 > http [ACK] Seq=2147 Ack=5600 Win=65535 Len=0
+    244 25.032200   64.233.169.103        10.22.70.102          TCP      [TCP segment of a reassembled PDU]
+    245 25.032238   64.233.169.103        10.22.70.102          TCP      [TCP segment of a reassembled PDU]
+    246 25.032255   64.233.169.103        10.22.70.102          TCP      [TCP segment of a reassembled PDU]
+    247 25.032306   10.22.70.102          64.233.169.103        TCP      1097 > http [ACK] Seq=2147 Ack=9470 Win=65535 Len=0
+    248 25.053469   Cisco_cc:93:a1        PVST+                 STP      RST. Root = 26846/00:14:f1:83:94:00  Cost = 3002  Port = 0x808d
+    249 25.355663   10.22.70.3            224.0.0.2             HSRP     Hello (state Active)
+    250 25.456419   10.22.70.102          10.254.10.82          DNS      Standard query A www.googleadservices.com
+    251 25.456819   10.254.10.82          10.22.70.102          DNS      Standard query response CNAME adservices.google.com CNAME adservices.l.google.com A 209.85.171.96
+    252 25.457197   10.22.70.102          209.85.171.96         TCP      1101 > http [SYN] Seq=0 Len=0 MSS=1460
+    253 25.457317   10.22.70.102          209.85.171.96         TCP      1102 > http [SYN] Seq=0 Len=0 MSS=1460
+    254 25.477765   10.22.70.102          64.233.169.103        TCP      [TCP segment of a reassembled PDU]
+    255 25.519414   64.233.169.103        10.22.70.102          TCP      http > 1096 [ACK] Seq=6494 Ack=5847 Win=9152 Len=0
+    256 25.519458   10.22.70.102          64.233.169.103        HTTP     POST /calendar/caldetails HTTP/1.1 (application/x-www-form-urlencoded)
+    257 25.550030   209.85.171.96         10.22.70.102          TCP      http > 1101 [SYN, ACK] Seq=0 Ack=1 Win=1380 Len=0 MSS=1380
+    258 25.550069   10.22.70.102          209.85.171.96         TCP      1101 > http [ACK] Seq=1 Ack=1 Win=65535 Len=0
+    259 25.550099   64.233.169.103        10.22.70.102          TCP      http > 1096 [ACK] Seq=6494 Ack=5928 Win=9152 Len=0
+    260 25.550259   10.22.70.102          209.85.171.96         HTTP     GET /pagead/conversion/1064505310/imp.gif?value=1&label=PURCHASE&script=0 HTTP/1.1
+    261 25.551326   209.85.171.96         10.22.70.102          TCP      http > 1102 [SYN, ACK] Seq=0 Ack=1 Win=1380 Len=0 MSS=1380
+    262 25.551345   10.22.70.102          209.85.171.96         TCP      1102 > http [ACK] Seq=1 Ack=1 Win=65535 Len=0
+    263 25.551397   10.22.70.102          209.85.171.96         HTTP     GET /pagead/conversion/1059417425/imp.gif?value=1&label=signup&script=0 HTTP/1.1
+    264 25.559955   10.22.70.102          64.233.169.103        TCP      [TCP segment of a reassembled PDU]
+    265 25.587299   64.233.169.103        10.22.70.102          TCP      http > 1097 [ACK] Seq=9470 Ack=3258 Win=9112 Len=0
+    266 25.587345   10.22.70.102          64.233.169.103        HTTP     POST /calendar/load HTTP/1.1 (application/x-www-form-urlencoded)
+    267 25.612601   64.233.169.103        10.22.70.102          TCP      http > 1097 [ACK] Seq=9470 Ack=3406 Win=11390 Len=0
+    268 25.643236   209.85.171.96         10.22.70.102          TCP      http > 1101 [ACK] Seq=1 Ack=503 Win=6432 Len=0
+    269 25.644521   209.85.171.96         10.22.70.102          HTTP     HTTP/1.1 200 OK (GIF89a)
+    270 25.645859   209.85.171.96         10.22.70.102          TCP      http > 1102 [ACK] Seq=1 Ack=501 Win=6432 Len=0
+    271 25.648514   209.85.171.96         10.22.70.102          HTTP     HTTP/1.1 200 OK (GIF89a)
+    272 25.786990   10.212.70.3           224.0.0.2             HSRP     Hello (state Standby)
+    273 25.838718   10.22.70.102          209.85.171.96         TCP      1101 > http [ACK] Seq=503 Ack=453 Win=65083 Len=0
+    274 25.838754   10.22.70.102          209.85.171.96         TCP      1102 > http [ACK] Seq=501 Ack=453 Win=65083 Len=0
+    275 26.135656   Cisco_cc:93:a1        PVST+                 STP      RST. Root = 24846/00:14:f1:59:f8:00  Cost = 3002  Port = 0x808d
+    276 26.308222   64.233.169.103        10.22.70.102          TCP      [TCP segment of a reassembled PDU]
+    277 26.311655   64.233.169.103        10.22.70.102          TCP      [TCP segment of a reassembled PDU]
+    278 26.311690   10.22.70.102          64.233.169.103        TCP      1097 > http [ACK] Seq=3406 Ack=11394 Win=65535 Len=0
+    279 26.311728   64.233.169.103        10.22.70.102          TCP      [TCP Previous segment lost] [TCP segment of a reassembled PDU]
+    280 26.311748   10.22.70.102          64.233.169.103        TCP      [TCP Dup ACK 278#1] 1097 > http [ACK] Seq=3406 Ack=11394 Win=65535 Len=0
+    281 26.311775   64.233.169.103        10.22.70.102          TCP      [TCP Fast Retransmission] [TCP segment of a reassembled PDU]
+    282 26.311802   10.22.70.102          64.233.169.103        TCP      1097 > http [ACK] Seq=3406 Ack=14154 Win=65535 Len=0
+    283 26.337839   64.233.169.103        10.22.70.102          TCP      [TCP segment of a reassembled PDU]
+    284 26.494962   10.22.70.102          64.233.169.103        TCP      1097 > http [ACK] Seq=3406 Ack=14758 Win=64931 Len=0
+    285 26.568202   Cisco_cc:93:a1        LLDP_Multicast        LLDP     Chassis Id = 00:14:a9:cc:93:a1 Port Id = Gi3/0/33 TTL = 120 
+    286 26.594824   10.212.70.2           224.0.0.2             HSRP     Hello (state Active)
+    287 26.942271   64.233.169.103        10.22.70.102          TCP      [TCP segment of a reassembled PDU]
+    288 26.942302   64.233.169.103        10.22.70.102          TCP      [TCP segment of a reassembled PDU]
+    289 26.942325   10.22.70.102          64.233.169.103        TCP      1096 > http [ACK] Seq=5928 Ack=9254 Win=65535 Len=0
+    290 26.942352   64.233.169.103        10.22.70.102          TCP      [TCP segment of a reassembled PDU]
+    291 26.968876   64.233.169.103        10.22.70.102          TCP      [TCP segment of a reassembled PDU]
+    292 26.968896   10.22.70.102          64.233.169.103        TCP      1096 > http [ACK] Seq=5928 Ack=11233 Win=65535 Len=0
+    293 26.968916   64.233.169.103        10.22.70.102          TCP      [TCP segment of a reassembled PDU]
+    294 26.968929   64.233.169.103        10.22.70.102          TCP      [TCP segment of a reassembled PDU]
+    295 26.968942   10.22.70.102          64.233.169.103        TCP      1096 > http [ACK] Seq=5928 Ack=13993 Win=65535 Len=0
+    296 26.995515   64.233.169.103        10.22.70.102          TCP      [TCP segment of a reassembled PDU]
+    297 26.995545   64.233.169.103        10.22.70.102          HTTP     HTTP/1.1 200 OK (text/javascript)
+    298 26.995565   10.22.70.102          64.233.169.103        TCP      1096 > http [ACK] Seq=5928 Ack=16075 Win=65535 Len=0
+    299 27.067416   Cisco_cc:93:a1        PVST+                 STP      RST. Root = 26846/00:14:f1:83:94:00  Cost = 3002  Port = 0x808d
+    300 27.845939   10.22.70.102          10.22.70.1            UDP      Source port: 1103  Destination port: 8905
+    301 27.961971   10.22.70.2            224.0.0.2             HSRP     Hello (state Standby)
+    302 28.159008   Cisco_cc:93:a1        PVST+                 STP      RST. Root = 24846/00:14:f1:59:f8:00  Cost = 3002  Port = 0x808d
+    303 28.246076   10.22.70.102          10.254.10.53          TCP      1104 > 1270 [SYN] Seq=0 Len=0 MSS=1460
+    304 28.246853   10.254.10.53          10.22.70.102          TCP      1270 > 1104 [SYN, ACK] Seq=0 Ack=1 Win=64240 Len=0 MSS=1460
+    305 28.246883   10.22.70.102          10.254.10.53          TCP      1104 > 1270 [ACK] Seq=1 Ack=1 Win=65535 Len=0
+    306 28.247355   10.22.70.102          10.254.10.53          TCP      [TCP segment of a reassembled PDU]
+    307 28.248176   10.254.10.53          10.22.70.102          TCP      [TCP segment of a reassembled PDU]
+    308 28.248209   10.22.70.102          10.254.10.53          TCP      [TCP segment of a reassembled PDU]
+    309 28.250835   10.254.10.53          10.22.70.102          TCP      [TCP segment of a reassembled PDU]
+    310 28.251681   10.22.70.102          10.254.10.53          TCP      [TCP segment of a reassembled PDU]
+    311 28.253499   10.254.10.53          10.22.70.102          TCP      [TCP segment of a reassembled PDU]
+    312 28.253831   10.22.70.102          10.254.10.53          TCP      1104 > 1270 [FIN, ACK] Seq=1438 Ack=229 Win=65307 Len=0
+    313 28.254832   10.254.10.53          10.22.70.102          TCP      1270 > 1104 [ACK] Seq=229 Ack=1439 Win=62803 Len=0
+    314 28.254851   10.254.10.53          10.22.70.102          TCP      1270 > 1104 [FIN, ACK] Seq=229 Ack=1439 Win=62803 Len=0
+    315 28.254865   10.22.70.102          10.254.10.53          TCP      1104 > 1270 [ACK] Seq=1439 Ack=230 Win=65307 Len=0
+    316 28.266809   10.22.70.3            224.0.0.2             HSRP     Hello (state Active)
+    317 28.707469   10.212.70.3           224.0.0.2             HSRP     Hello (state Standby)
+    318 29.080218   Cisco_cc:93:a1        PVST+                 STP      RST. Root = 26846/00:14:f1:83:94:00  Cost = 3002  Port = 0x808d
+    319 29.448130   10.22.70.102          10.254.20.35          TCP      [TCP segment of a reassembled PDU]
+    320 29.448938   10.254.20.35          10.22.70.102          TCP      1025 > 3770 [ACK] Seq=0 Ack=1 Win=63612 Len=0
+    321 29.466237   10.212.70.2           224.0.0.2             HSRP     Hello (state Active)
+    322 29.655289   Dell_91:c6:5f         Broadcast             ARP      Who has 10.22.70.1?  Tell 10.22.70.66
+    323 30.189105   Cisco_cc:93:a1        PVST+                 STP      RST. Root = 24846/00:14:f1:59:f8:00  Cost = 3002  Port = 0x808d
+    324 30.537204   10.22.70.102          128.101.35.26         SSH      Encrypted request packet len=52
+    325 30.585046   10.22.70.102          128.101.35.26         SSH      Encrypted request packet len=52
+    326 30.588450   128.101.35.26         10.22.70.102          SSH      Encrypted response packet len=52
+    327 30.639045   128.101.35.26         10.22.70.102          SSH      Encrypted response packet len=52
+    328 30.639086   10.22.70.102          128.101.35.26         TCP      4946 > 22 [ACK] Seq=624 Ack=5208 Win=65303 Len=0
+    329 30.753262   10.22.70.102          128.101.35.26         SSH      Encrypted request packet len=52
+    330 30.786799   10.5.65.36            239.255.255.250       SSDP     M-SEARCH * HTTP/1.1
+    331 30.805432   128.101.35.26         10.22.70.102          SSH      Encrypted response packet len=52
+    332 30.832063   128.101.35.26         10.22.70.102          SSH      Encrypted response packet len=52
+    333 30.832091   10.22.70.102          128.101.35.26         TCP      4946 > 22 [ACK] Seq=676 Ack=5312 Win=65199 Len=0
+    334 30.832120   128.101.35.26         10.22.70.102          SSH      Encrypted response packet len=116
+    335 30.870030   10.22.70.102          128.101.35.26         TCP      4946 > 22 [ACK] Seq=676 Ack=5428 Win=65083 Len=0
+    336 30.883976   128.101.35.26         10.22.70.102          SSH      Encrypted response packet len=1380
+    337 30.883998   128.101.35.26         10.22.70.102          SSH      Encrypted response packet len=1380
+    338 30.884025   10.22.70.102          128.101.35.26         TCP      4946 > 22 [ACK] Seq=676 Ack=8188 Win=65535 Len=0
+    339 30.921247   128.101.35.26         10.22.70.102          SSH      Encrypted response packet len=1188
+    340 30.946537   10.22.70.2            224.0.0.2             HSRP     Hello (state Standby)
+    341 31.088793   10.22.70.102          128.101.35.26         TCP      4946 > 22 [ACK] Seq=676 Ack=9376 Win=64347 Len=0
+    342 31.092969   Cisco_cc:93:a1        PVST+                 STP      RST. Root = 26846/00:14:f1:83:94:00  Cost = 3002  Port = 0x808d
+    343 31.103628   10.5.129.178          239.255.255.250       SSDP     M-SEARCH * HTTP/1.1
+    344 31.198148   10.22.70.102          10.254.30.112         TCP      [TCP segment of a reassembled PDU]
+    345 31.199470   10.254.30.112         10.22.70.102          TCP      4704 > 3558 [ACK] Seq=0 Ack=1 Win=65535 Len=0
+    346 31.223431   10.22.70.3            224.0.0.2             HSRP     Hello (state Active)
+    347 31.276938   10.22.70.102          10.254.30.112         TCP      3558 > 4704 [PSH, ACK] Seq=1 Ack=0 Win=64593 Len=189
+    348 31.278012   10.254.30.112         10.22.70.102          DCERPC   Response: call_id: 281 ctx_id: 0
+    349 31.416895   10.22.70.102          10.254.30.112         TCP      3558 > 4704 [ACK] Seq=190 Ack=157 Win=64436 Len=0
+    350 31.585227   10.22.70.102          128.101.35.26         SSH      Encrypted request packet len=52
+    351 31.633122   10.22.70.102          128.101.35.26         SSH      Encrypted request packet len=52
+    352 31.648089   10.212.70.3           224.0.0.2             HSRP     Hello (state Standby)
+    353 31.656071   128.101.35.26         10.22.70.102          SSH      Encrypted response packet len=52
+    354 31.702672   128.101.35.26         10.22.70.102          SSH      Encrypted response packet len=52
+    355 31.702710   10.22.70.102          128.101.35.26         TCP      4946 > 22 [ACK] Seq=780 Ack=9480 Win=64243 Len=0
+    356 31.711984   Cisco_cc:93:a1        Cisco_cc:93:a1        LOOP     Reply
+    357 31.739944   10.212.70.3           224.0.0.13            PIMv2    Hello
+    358 31.745142   10.22.70.102          128.101.35.26         SSH      Encrypted request packet len=52
+    359 31.797183   128.101.35.26         10.22.70.102          SSH      Encrypted response packet len=52
+    360 31.813156   128.101.35.26         10.22.70.102          SSH      Encrypted response packet len=52
+    361 31.813176   128.101.35.26         10.22.70.102          SSH      Encrypted response packet len=116
+    362 31.813196   10.22.70.102          128.101.35.26         TCP      4946 > 22 [ACK] Seq=832 Ack=9700 Win=65535 Len=0
+    363 31.866411   128.101.35.26         10.22.70.102          SSH      Encrypted response packet len=1380
+    364 31.866436   128.101.35.26         10.22.70.102          SSH      Encrypted response packet len=1380
+    365 31.866452   128.101.35.26         10.22.70.102          SSH      [TCP Previous segment lost] Encrypted response packet len=128
+    366 31.866470   10.22.70.102          128.101.35.26         TCP      4946 > 22 [ACK] Seq=832 Ack=12460 Win=65535 Len=0 SLE=13840 SRE=13968
+    367 31.866499   128.101.35.26         10.22.70.102          SSH      [TCP Out-Of-Order] Encrypted response packet len=1380
+    368 31.866533   10.22.70.102          128.101.35.26         TCP      4946 > 22 [ACK] Seq=832 Ack=13968 Win=65535 Len=0
+    369 31.868807   10.22.70.102          128.101.35.26         SSH      Encrypted request packet len=52
+    370 31.959619   128.101.35.26         10.22.70.102          TCP      22 > 4946 [ACK] Seq=13968 Ack=884 Win=8576 Len=0
+    371 32.058115   10.5.65.36            239.255.255.250       SSDP     NOTIFY * HTTP/1.1
+    372 32.060760   10.5.65.36            239.255.255.250       SSDP     NOTIFY * HTTP/1.1
+    373 32.066085   10.5.65.36            239.255.255.250       SSDP     NOTIFY * HTTP/1.1
+    374 32.078065   10.5.65.36            239.255.255.250       SSDP     NOTIFY * HTTP/1.1
+    375 32.096702   10.5.65.36            239.255.255.250       SSDP     NOTIFY * HTTP/1.1
+    376 32.225840   Cisco_cc:93:a1        PVST+                 STP      RST. Root = 24846/00:14:f1:59:f8:00  Cost = 3002  Port = 0x808d
+    377 32.398891   10.212.70.2           224.0.0.2             HSRP     Hello (state Active)
+    378 33.107117   Cisco_cc:93:a1        PVST+                 STP      RST. Root = 26846/00:14:f1:83:94:00  Cost = 3002  Port = 0x808d
+    379 33.377104   10.22.70.102          10.22.70.1            UDP      Source port: 1105  Destination port: 8905
+    380 33.719476   10.22.70.3            224.0.0.13            PIMv2    Hello
+    381 33.895198   10.212.70.2           224.0.0.1             IGMP     V2 Membership Query
+    382 33.895233   10.22.70.2            224.0.0.2             HSRP     Hello (state Standby)
+    383 34.176079   10.22.70.3            224.0.0.2             HSRP     Hello (state Active)
+    384 34.246608   Cisco_cc:93:a1        PVST+                 STP      RST. Root = 24846/00:14:f1:59:f8:00  Cost = 3002  Port = 0x808d
+    385 34.623363   10.212.70.3           224.0.0.2             HSRP     Hello (state Standby)
+    386 35.119914   Cisco_cc:93:a1        PVST+                 STP      RST. Root = 26846/00:14:f1:83:94:00  Cost = 3002  Port = 0x808d
+    387 35.382142   10.212.70.2           224.0.0.2             HSRP     Hello (state Active)
