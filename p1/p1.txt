@@ -8,8 +8,11 @@
 
 3. '((1-[0-9]{3}-[0-9]{3}-[0-9]{4})|([0-9]{3}-[0-9]{3}-[0-9]{4})|(\([0-9]{3}\)[0-9]{3}-[0-9]{4})|([0-9]{3}-[0-9]{4}))'
 
-4. sed -e 's/^[ \t]*//' /etc/ssl/openssl.cnf | egrep '^[^#[]'
-    **STILL IN PROGRESS**
+4. a.sed -e 's/[ \t]*//' /etc/ssl/openssl.cnf | egrep '^[^#[]' | sed -e 's/=/ = /' | egrep -o '=
+[^#]*' | sed -e 's/= *//' | sed -e 's/[ \t]*$//' | sort -u
+    
+    (There's probably an easier way to do this using a sed script, but I wrote this before we did
+    that unit)
 
 5. 
   a. awk {'print$5'} network.txt | sort | uniq -c | sort -nr
