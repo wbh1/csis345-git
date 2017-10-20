@@ -19,7 +19,7 @@ main()
     else {
         // this is the child
 	printf("Child: %d\n", getpid());
- //       execlp("./test", "./test", 0)
+        execlp("./test", "./test", 0);
         //signal(SIGINT, SIG_IGN);
     }
     pause();
@@ -28,6 +28,6 @@ main()
 void handle_sigusr1(int sig)
 {
   printf("Received a SIGUSR1!!\n");
-  char *args[]={"./test", NULL};
-  execvp(args[0], args);
+//  char *args[]={"./test", NULL};
+//  execvp(args[0], args);
 }
