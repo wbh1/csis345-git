@@ -1,0 +1,6 @@
+1. How are signal handlers passed from parent to child through fork and exec system calls?
+
+  Signal handlers are normally passed from parent to child because a child process is an exact copy
+  of a parent process. However, a child process make exec its own, different code, which would
+  replace any code (e.g. signal handlers) that it inherited from its parent.
+
