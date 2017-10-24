@@ -10,3 +10,6 @@ Answer the following questions. Add each answer in a separate commit. (E.g. fill
     to commit. This enables users to "track" how the code changes over time.
 
 3. Explain how git enables sharing code.
+  - Git enables sharing code by providing a centralized place from which collaborates can pull and
+    push code changes to remotely through the use of services provided by companies like Github and
+    Gitlab.
