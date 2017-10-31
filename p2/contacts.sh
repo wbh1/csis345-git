@@ -6,8 +6,8 @@ echo $leArgs " these are all arguments"
 # exit functions
 function firstErr() { echo  "ERROR: Provide a first name using -f." >&2; exit 1;}
 function lastErr()  { echo  "ERROR: Provide a last name using -l." >&2; exit 2;}
-function emailErr() { echo  "ERROR: Provide an email address using -e." >&2; exit 3;}
-function phoneErr() { echo  "ERROR: Provide a phone number using -n." >&2; exit 4;}
+function emailErr() { echo  "ERROR: Provide an valid email address using -e." >&2; exit 3;}
+function phoneErr() { echo  "ERROR: Provide a valid phone number using -n." >&2; exit 4;}
 function usage() { echo -e "\nERROR: Please specify:\n- first name\t -f <name>\n- last name\t\
  -l <name>\n- email address\t -e <email>\n- phone number\t -n <phone number>" >&2; exit 7;}
 
@@ -37,13 +37,19 @@ function parseArgs () {
         fi;;
     'e')
         if [ -n "$OPTARG" ]; then
-          emailAddr="$OPTARG"
-          hasE=1
+          regex="^[a-z0-9!#\$%&'*+/=?^_\`{|}~-]+(\.[a-z0-9!#$%&'*+/=?^_\`{|}~-]+)*@([a-z0-9]([a-z0-9-]*[a-z0-9])?\.)+[a-z0-9]([a-z0-9-]*[a-z0-9])?\$"
+          if [[ "$OPTARG" =~ $regex ]]; then
+            emailAddr="$OPTARG"
+            hasE=1
+          fi
         fi;;
     'n')
         if [ -n "$OPTARG" ]; then
-          phoneNum="$OPTARG"
-          hasN=1
+          if [[ $OPTARG =~ ^([0-9]( |-)?)?(\(?[0-9]{3}\)?|[0-9]{3})( |-)?([0-9]{3}(
+            |-)?[0-9]{4}|[a-zA-Z0-9]{7}) ]]; then
+            phoneNum="$OPTARG"
+            hasN=1
+          fi
         fi;;
     esac
   done
@@ -70,9 +76,19 @@ function parseArgs () {
   fi
 }
 
+
+# !!! Need to figure out how to preserve newlines so that AWK works right
 function printTable(){
-  echo -e "FIRST:LAST:EMAIL:PHONE\n$(cat contactlist.txt)" > /tmp/list.txt
-  column -t -c 4 -s : /tmp/list.txt
+#  echo -e "FIRST\t:LAST\t:EMAIL\t:PHONE\n$@" > /tmp/list.txt
+#  column -t -c 4 -s : /tmp/list.txt
+  awk ' BEGIN { FS=":"; OFS = "\t"; print "FIRST", "LAST", "EMAIL", "PHONE\n" } 
+  { printf("%.18s %.18s %.30s %.15s\n", $1, $2, $3, $4)}' contactlist.txt | column -t
+}
+
+function findEm(){
+  echo $@ "is all args"
+  results=`egrep $@ contactlist.txt`
+  printTable $results
 }
 
 # listen for options -i -p -s -k or -c
@@ -85,10 +101,11 @@ while getopts ":ipskc:" opt; do
       addEntry;;
     p)
       echo "-p was triggered" >&2
-      printTable
+      printTable 
       ;; 
     s)
       echo "-s was triggered" >&2
+      findEm $2
       ;;
     k)
       echo "-k was triggered, Parameter: $OPTARG" >&2
