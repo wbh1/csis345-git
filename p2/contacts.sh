@@ -85,10 +85,15 @@ function printTable(){
   { printf("%.18s %.18s %.30s %.15s\n", $1, $2, $3, $4)}' contactlist.txt | column -t
 }
 
+function printSearch(){
+  awk ' BEGIN { FS=":"; OFS = "\t"; print "FIRST", "LAST", "EMAIL", "PHONE\n" } 
+  { printf("%.18s %.18s %.30s %.15s\n", $1, $2, $3, $4)}' /tmp/search.txt | column -t
+}
+
 function findEm(){
   echo $@ "is all args"
-  results=`egrep $@ contactlist.txt`
-  printTable $results
+  egrep $@ contactlist.txt > /tmp/search.txt
+  printSearch
 }
 
 # listen for options -i -p -s -k or -c
