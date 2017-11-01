@@ -12,7 +12,7 @@ function phoneErr() { echo  "ERROR: Provide a valid phone number using -n." >&2;
 function usage() { echo -e "\nERROR: Please specify:\n- first name\t -f <name>\n- last name\t\
  -l <name>\n- email address\t -e <email>\n- phone number\t -n <phone number>" >&2; exit 7;}
 
-
+# Parse optional flags
 function optionals() {
   while getopts ":k:c:" optional; do
     case $optional in
@@ -66,6 +66,7 @@ function parseArgs () {
           hasL=1
         fi;;
     'e')
+        # ugly email regex incoming...
         if [ -n "$OPTARG" ]; then
           regex="^[a-z0-9!#\$%&'*+/=?^_\`{|}~-]+(\.[a-z0-9!#$%&'*+/=?^_\`{|}~-]+)*@([a-z0-9]([a-z0-9-]*[a-z0-9])?\.)+[a-z0-9]([a-z0-9-]*[a-z0-9])?\$"
           if [[ "$OPTARG" =~ $regex ]]; then
@@ -76,6 +77,7 @@ function parseArgs () {
           fi
         fi;;
     'n')
+        #  ugly phone regex incoming...
         if [ -n "$OPTARG" ]; then
           if [[ $OPTARG =~ ^([0-9]( |-)?)?(\(?[0-9]{3}\)?|[0-9]{3})( |-)?([0-9]{3}(
             |-)?[0-9]{4}|[a-zA-Z0-9]{7}) ]]; then
@@ -103,6 +105,7 @@ function parseArgs () {
     esac
   done
 
+  # I used ":" to continue since the if's used to have echo statements for debugging
   if [ $hasF -ne 0 ]; then
     :
   else
