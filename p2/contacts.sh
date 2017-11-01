@@ -1,19 +1,49 @@
 #!/bin/bash
 
 leArgs="$@"
-echo $leArgs " these are all arguments"
+fileName="contactlist.txt"
+sortField="2,2"
 
 # exit functions
 function firstErr() { echo  "ERROR: Provide a first name using -f." >&2; exit 1;}
 function lastErr()  { echo  "ERROR: Provide a last name using -l." >&2; exit 2;}
-function emailErr() { echo  "ERROR: Provide an valid email address using -e." >&2; exit 3;}
-function phoneErr() { echo  "ERROR: Provide a valid phone number using -n." >&2; exit 4;}
+function emailErr() { echo  "ERROR: Provide an valid email address using -e." >&2;}
+function phoneErr() { echo  "ERROR: Provide a valid phone number using -n." >&2;}
 function usage() { echo -e "\nERROR: Please specify:\n- first name\t -f <name>\n- last name\t\
  -l <name>\n- email address\t -e <email>\n- phone number\t -n <phone number>" >&2; exit 7;}
 
+
+function optionals() {
+  while getopts ":k:c:" optional; do
+    case $optional in
+    'k')
+      if [[ $OPTARG =~ [1-4] ]]; then
+        sortField="$OPTARG,$OPTARG"
+      else
+        exit 6
+      fi
+      ;;
+    'c')
+      if [ -n "$OPTARG" ]; then
+        fileName=$OPTARG
+      else
+        echo "Give a filename."
+        exit 5
+      fi
+      ;;
+    esac
+  done
+} 
+
+function body() {
+      IFS= read -r header
+          printf '%s\n' "$header"
+              "$@"
+}
+
 # function to add an entry because why not make it a function
 function addEntry(){
-  echo $firstName":"$lastName":"$emailAddr":"$phoneNum >> contactlist.txt
+  echo $firstName":"$lastName":"$emailAddr":"$phoneNum >> $fileName
 }
 
 # arg parsing function to give more specific error codes
@@ -23,7 +53,7 @@ function parseArgs () {
   local hasE=0
   local hasN=0
 
-  while getopts 'f:l:e:n:' opt "$@"; do
+  while getopts 'f:l:e:n:c:k:' opt "$@"; do
     case $opt in
     'f')
         if [ -n "$OPTARG" ]; then
@@ -41,6 +71,8 @@ function parseArgs () {
           if [[ "$OPTARG" =~ $regex ]]; then
             emailAddr="$OPTARG"
             hasE=1
+          else
+            hasE=2
           fi
         fi;;
     'n')
@@ -49,74 +81,105 @@ function parseArgs () {
             |-)?[0-9]{4}|[a-zA-Z0-9]{7}) ]]; then
             phoneNum="$OPTARG"
             hasN=1
+          else
+            hasN=2
           fi
-        fi;;
+        fi;; 
+    'k')
+      if [[ $OPTARG =~ [1-4] ]]; then
+        sortField="$OPTARG,$OPTARG"
+      else
+        exit 6
+      fi
+      ;;
+    'c')
+      if [ -n "$OPTARG" ]; then
+        fileName=$OPTARG
+      else
+        echo "Give a filename."
+        exit 5
+      fi
+      ;;
     esac
   done
 
   if [ $hasF -ne 0 ]; then
-    echo "First name acquired."
+    :
   else
     firstErr
   fi
   if [ $hasL -ne 0 ]; then
-    echo "Last name acquired."
+    : 
   else
     lastErr
   fi
-  if [ $hasE -ne 0 ]; then
-    echo "Email acquired."
+  if [ $hasE -eq 1 ]; then
+    : 
+  elif [ $hasE -eq 2 ]; then
+    emailErr
+    exit 9
   else
     emailErr
+    exit 3
   fi
-  if [ $hasN -ne 0 ]; then
-    echo "Phone acquired."
+  if [ $hasN -eq 1 ]; then
+    : 
+  elif [ $hasN -eq 2 ]; then
+    phoneErr
+    exit 10
   else
     phoneErr
+    exit 4
   fi
 }
 
 
-# !!! Need to figure out how to preserve newlines so that AWK works right
 function printTable(){
-#  echo -e "FIRST\t:LAST\t:EMAIL\t:PHONE\n$@" > /tmp/list.txt
-#  column -t -c 4 -s : /tmp/list.txt
+  optionals $leArgs
   awk ' BEGIN { FS=":"; OFS = "\t"; print "FIRST", "LAST", "EMAIL", "PHONE\n" } 
-  { printf("%.18s %.18s %.30s %.15s\n", $1, $2, $3, $4)}' contactlist.txt | column -t
+  { printf("%.18s %.18s %.30s %.15s\n", $1, $2, $3, $4)}' $fileName | column -t | body sort -k$sortField
 }
 
 function printSearch(){
+  optionals $leArgs
   awk ' BEGIN { FS=":"; OFS = "\t"; print "FIRST", "LAST", "EMAIL", "PHONE\n" } 
-  { printf("%.18s %.18s %.30s %.15s\n", $1, $2, $3, $4)}' /tmp/search.txt | column -t
+  { printf("%.18s %.18s %.30s %.15s\n", $1, $2, $3, $4)}' /tmp/search.txt | column -t | body sort -k$sortField
 }
 
+
 function findEm(){
-  echo $@ "is all args"
-  egrep $@ contactlist.txt > /tmp/search.txt
+  optionals $leArgs
+  egrep $2 $fileName > /tmp/search.txt || echo "No results."; exit 8
   printSearch
 }
 
 # listen for options -i -p -s -k or -c
 # the preceding colon puts getopts in silent error reporting mode
-while getopts ":ipskc:" opt; do
-  case $opt in
+while getopts ":k:c:ips:" opt; do
+  case $opt in 
     i)
-      echo "-i was triggered" >&2
       parseArgs $leArgs
       addEntry;;
     p)
-      echo "-p was triggered" >&2
       printTable 
       ;; 
     s)
-      echo "-s was triggered" >&2
-      findEm $2
+      findEm $leArgs
       ;;
     k)
-      echo "-k was triggered, Parameter: $OPTARG" >&2
+      if [[ $OPTARG =~ [1-4] ]]; then
+        sortField="$OPTARG,$OPTARG"
+      else
+        exit 6
+      fi
       ;;
     c)
-      echo "-c was triggered, Parameter: $OPTARG" >&2
+      if [ -n "$OPTARG" ]; then
+        fileName=$OPTARG
+      else
+        echo "Give a filename."
+        exit 5
+      fi
       ;;
     \?)
       echo "Invalid option: -$OPTARG" >&2
@@ -128,3 +191,4 @@ while getopts ":ipskc:" opt; do
       ;;
   esac
 done
+exit 0
