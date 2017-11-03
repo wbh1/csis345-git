@@ -143,17 +143,12 @@ function printTable(){
   { printf("%.18s %.18s %.30s %.15s\n", $1, $2, $3, $4)}' $fileName | column -t | body sort -k$sortField
 }
 
-function printSearch(){
-  optionals $leArgs
-  awk ' BEGIN { FS=":"; OFS = "\t"; print "FIRST", "LAST", "EMAIL", "PHONE\n" } 
-  { printf("%.18s %.18s %.30s %.15s\n", $1, $2, $3, $4)}' /tmp/search.txt | column -t | body sort -k$sortField
-}
-
-
+# Insert an exit!!! :wq
 function findEm(){
   optionals $leArgs
-  egrep $2 $fileName > /tmp/search.txt || echo "No results."; exit 8
-  printSearch
+  egrep $2 $fileName > search.txt || echo "No results." 
+  fileName="search.txt"
+  printTable
 }
 
 # listen for options -i -p -s -k or -c
