@@ -149,6 +149,7 @@ function findEm(){
   egrep $2 $fileName > search.txt || echo "No results." 
   fileName="search.txt"
   printTable
+  rm search.txt
 }
 
 # listen for options -i -p -s -k or -c
