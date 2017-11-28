@@ -48,7 +48,6 @@ function optionals() {
       ;;
     'N')
       editNum=$OPTARG
-      echo "edit" $editNum;;
     esac
   done
 }
@@ -210,7 +209,6 @@ function editTime(){
     findEm
   else
     awk -F: -v i="$editNum" '$6 == i' $fileName > result.txt
-    cat result.txt
   fi
 
   lines=`wc -l result.txt | awk ' { print $1 } '`
