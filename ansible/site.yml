@@ -1,16 +1,15 @@
 ---
   - hosts: all
+    remote_user: root
     roles:
     - role: common
 
   - hosts: pxe
+    remote_user: root
     roles:
       - role: pxeboot
 
-  - hosts: musicserver
-    roles:
-      - role: subsonic
-
-  - hosts: blogs
-    roles:
-      - role: ghost
+  # - hosts: music
+  #   remote_user: root
+  #   roles:
+  #     - role: subsonic

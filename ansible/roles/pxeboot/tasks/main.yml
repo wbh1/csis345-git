@@ -1,0 +1,148 @@
+---
+  - name: Install TFTP server
+    yum:
+      name: tftp-server
+      state: present
+
+  - name: Install syslinux
+    yum:
+      name: syslinux
+      state: present
+
+  - name: Install httpd (Apache)
+    yum:
+      name: httpd
+      state: present
+
+  - name: Install xinetd
+    yum:
+      name: xinetd
+      state: present
+
+  - name: Copy TFTP server configuration
+    template:
+      src: tftp
+      dest: /etc/xinetd.d/tftp
+    notify: restart xinetd
+
+  - name: Move TFTP conf files (pxelinux)
+    copy:
+      src: /usr/share/syslinux/pxelinux.0
+      dest: /var/lib/tftpboot/pxelinux.0
+      remote_src: yes
+
+  - name: Move TFTP conf files (menu.c32)
+    copy:
+      src: /usr/share/syslinux/menu.c32
+      dest: /var/lib/tftpboot/menu.c32
+      remote_src: yes
+
+  - name: Move TFTP conf files (memdisk)
+    copy:
+      src: /usr/share/syslinux/memdisk
+      dest: /var/lib/tftpboot/memdisk
+      remote_src: yes
+
+  - name: Move TFTP conf files (mboot.c32)
+    copy:
+      src: /usr/share/syslinux/mboot.c32
+      dest: /var/lib/tftpboot/mboot.c32
+      remote_src: yes
+
+  - name: Move TFTP conf files (chain.c32)
+    copy:
+      src: /usr/share/syslinux/chain.c32
+      dest: /var/lib/tftpboot/chain.c32
+      remote_src: yes
+
+  - name: Download CentOS ISO (with checksum)
+    get_url:
+      url: http://mirrors.mit.edu/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-1708.iso
+      dest: /root/CentOS-7-x86_64-Minimal-1708.iso
+      checksum: sha256:bba314624956961a2ea31dd460cd860a77911c1e0a56e4820a12b9c5dad363f5
+
+  - name: Make directories for CentOS files
+    file:
+      path: /var/lib/tftpboot/CentOS7
+      state: directory
+
+  - name: Make directory for PXE conf
+    file:
+      path: /var/lib/tftpboot/pxelinux.cfg
+      state: directory
+
+  - name: Make directory for mounting
+    file:
+      path: /mnt/CentOS
+      state: directory
+
+  - name: Mount CentOS ISO
+    shell: mount -o loop /root/CentOS-7-x86_64-Minimal-1708.iso /mnt/CentOS
+
+    # mount does not support loop option intuitively
+    # mount:
+    #   path: /mnt/CentOS
+    #   src: /root/CentOS-7-x86_64-Minimal-1708.iso
+    #   opts: -o,loop
+    #   state: mounted
+    #   fstype: xfs
+
+  - name: Extract CentOS files
+    shell: cp -fr /mnt/CentOS/* /var/lib/tftpboot/CentOS7/
+
+    # remote_src does not support recursive copying yet
+    # copy:
+    #   src: /mnt/CentOS/
+    #   dest: /var/lib/tftpboot/Centos7/
+    #   remote_src: yes
+    #   directory_mode: yes
+
+  - name: chmod CentOS files
+    file:
+      path: /var/lib/tftpboot/CentOS7/
+      state: directory
+      mode: 0755
+      recurse: yes
+    # shell: chmod -R 755 /var/lib/tftpboot/CentOS7/
+
+  - name: Create Apache conf file
+    template:
+      src: pxeboot.conf
+      dest: /etc/httpd/conf.d/pxeboot.conf
+
+  - name: Create PXE conf file
+    template:
+      src: default
+      dest: /var/lib/tftpboot/pxelinux.cfg/default
+    notify:
+      - restart xinetd
+      - restart apache
+
+  - name: Move Kickstart file
+    template:
+      src: anaconda-ks.cfg
+      dest: /var/lib/tftpboot/CentOS7/anaconda-ks.cfg
+      mode: 0777
+
+  - name: enable httpd on boot
+    service:
+      name: httpd
+      enabled: yes
+
+  - name: enable xinetd on boot
+    service:
+      name: xinetd
+      enabled: yes
+
+  - name: disable firewalld on boot
+    service:
+      name: firewalld
+      state: stopped
+      enabled: no
+
+  - name: disable SELinux
+    selinux:
+      state: disabled
+
+  - name: unmount the CentOS iso
+    shell: umount /mnt/CentOS

@@ -1,0 +1,46 @@
+---
+  - name: Install EPEL repository
+    yum:
+      name: epel-release
+      state: present
+
+  - name: Install nginx
+    yum:
+      name: nginx
+      state: present
+
+  - name: Download MySQL repository
+    get_url:
+      url: https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
+      dest: /root/mysql57-community-release-el7-11.noarch.rpm
+      checksum: md5:c070b754ce2de9f714ab4db4736c7e05
+
+  - name: Install MySQL repoository
+    yum:
+      name: /root/mysql57-community-release-el7-11.noarch.rpm
+      state: present
+
+  - name: Install MySQL
+    yum:
+      name: mysql-server
+      state: present
+
+  # - name: Add NodeJS repo
+  #   shell: curl --silent --location https://rpm.nodesource.com/setup_6.x | sudo bash -
+
+  - name: Install NodeJS
+    yum:
+      name: nodejs-6.12.0-1.el7.x86_64
+      state: present
+
+  - name: Install ghost CLI
+    npm:
+      name: ghost-cli
+      global: yes
+
+  - name: Make directory for Ghost
+    file:
+      path: /var/www/ghost
+      state: directory
+      owner: wbhegedus
+      group: wheel
