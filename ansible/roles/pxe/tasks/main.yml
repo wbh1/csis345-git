@@ -1,0 +1,36 @@
+---
+  - name: Install TFTP server
+    yum: name=tftp-server state=present
+
+  - name: Install syslinux
+    yum: name=syslinux state=present
+
+  - name: Install httpd (Apache)
+    yum: name=httpd state=present
+
+  - name: Copy TFTP server configuration
+    template: src=tftp dest=/etc/xinetd.d/tftp
+    notify: restart xinetd
+
+  - name: Move TFTP conf files
+    copy:
+      src: /usr/share/syslinux/pxelinux.0
+      dest: /var/lib/tftpboot/pxelinux.0
+    copy:
+      src: /usr/share/syslinux/menu.c32
+      dest: /var/lib/tftpboot/menu.c32
+    copy:
+      src: /usr/share/syslinux/memdisk
+      dest: /var/lib/tftpboot/memdisk
+    copy:
+      src: /usr/share/syslinux/mboot.c32
+      dest: /var/lib/tftpboot/mboot.c32
+    copy:
+      src: /usr/share/syslinux/chain.c32
+      dest: /var/lib/tftpboot/chain.c32
+
+  - name: Download CentOS ISO (with checksum)
+    get_url:
+      url: http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-1708.iso
+      dest: /root/CentOS-7-x86_64-Minimal-1708.iso
+      checksum: bba314624956961a2ea31dd460cd860a77911c1e0a56e4820a12b9c5dad363f5

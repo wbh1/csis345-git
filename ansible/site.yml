@@ -1,0 +1,16 @@
+---
+  - hosts: all
+    roles:
+    - role: common
+
+  - hosts: pxe
+    roles:
+      - role: pxeboot
+
+  - hosts: musicserver
+    roles:
+      - role: subsonic
+
+  - hosts: blogs
+    roles:
+      - role: ghost
