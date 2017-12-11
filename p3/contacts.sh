@@ -226,13 +226,13 @@ function editTime(){
         if [ -n "$OPTARG" ]; then
           new="$OPTARG"
           old=`awk -F: '{ print $1 }' result.txt`
-          sed -i '' "s/$old/$new/" contactlist.txt
+          sed -i "s/$old/$new/" contactlist.txt
         fi;;
     'l')
         if [ -n "$OPTARG" ]; then
           new="$OPTARG"
           old=`awk -F: '{ print $2 }' result.txt`
-          sed -i '' "s/$old/$new/" contactlist.txt
+          sed -i "s/$old/$new/" contactlist.txt
         fi;;
     'e')
         # ugly email regex incoming...
@@ -241,7 +241,7 @@ function editTime(){
           if [[ "$OPTARG" =~ $regex ]]; then
             new="$OPTARG"
             old=`awk -F: '{ print $3 }' result.txt`
-            sed -i '' "s/$old/$new/" contactlist.txt
+            sed -i "s/$old/$new/" contactlist.txt
           else
             emailErr
             exit 9
@@ -254,7 +254,7 @@ function editTime(){
             |-)?[0-9]{4}|[a-zA-Z0-9]{7}) ]]; then
             new="$OPTARG"
             old=`awk -F: '{ print $4 }' result.txt`
-            sed -i '' "s/$old/$new/" contactlist.txt
+            sed -i "s/$old/$new/" contactlist.txt
           else
             phoneErr
             exit 10
@@ -264,7 +264,7 @@ function editTime(){
       if [ -n "$OPTARG" ]; then
         new="$OPTARG"
         old=`awk -F: '{ print $5 }' result.txt`
-        sed -i '' "s/$old/$new/" contactlist.txt
+        sed -i "s/$old/$new/" contactlist.txt
       fi;;
     esac
   done
