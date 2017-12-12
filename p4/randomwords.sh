@@ -15,6 +15,9 @@ function argParse() {
     n)
       if [[ $OPTARG =~ [1-8] ]]; then
         numWords=$OPTARG
+      else
+        echo "Specify only numbers 1-8 with -n."
+        exit 2
       fi;;
 
     t)
@@ -25,6 +28,7 @@ function argParse() {
         :
       else
         echo "Invalid variance. Please provide float between 0.0 and 1.0"
+        exit 1
       fi;;
    
    esac
@@ -41,10 +45,10 @@ function substitutes () {
           array[$i]=${imLazy[$change]}
         fi
     done
-  rm words.txt
   echo ${array[*]} > word.txt
   sed -i "s/ //g" word.txt
   cat word.txt
+  rm words.txt index.html word.txt
 }
 
 function allTheWords () {
